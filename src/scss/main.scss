@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import './reset';
+@import url('https://fonts.googleapis.com/css?family=Catamaran');
+
+html {
+  font-size: 10px;
+}
+
+body {
+  // min-height: 100vh;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 2rem;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}

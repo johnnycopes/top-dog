@@ -1,0 +1,12 @@
+.employees {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+
+  &__list {
+    grid-column: 1;
+  }
+
+  &__details {
+    grid-column: 2;
+  }
+}
