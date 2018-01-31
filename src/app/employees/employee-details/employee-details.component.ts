@@ -1,5 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+
 import { Employee } from '../employee.model';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-employee-details',
@@ -7,11 +10,22 @@ import { Employee } from '../employee.model';
   styleUrls: ['./employee-details.component.scss']
 })
 export class EmployeeDetailsComponent implements OnInit {
-  @Input() employee: Employee;
+  employee: Employee;
+  id: number;
 
-  constructor() { }
+  constructor(
+    private employeeService: EmployeeService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.route.params
+      .subscribe(
+        (params: Params) => {
+          this.id = +params.id;
+          this.employee = this.employeeService.getEmployee(this.id);
+        }
+      );
   }
 
 }

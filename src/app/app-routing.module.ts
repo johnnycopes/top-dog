@@ -3,13 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { EmployeesComponent } from './employees/employees.component';
+import { EmployeeStartComponent } from './employees/employee-start/employee-start.component';
+import { EmployeeDetailsComponent } from './employees/employee-details/employee-details.component';
 import { CandidatesComponent } from './candidates/candidates.component';
 
 const ROUTES: Routes = [
-  { path: 'employees/:id', component: EmployeesComponent },
-  { path: 'employees', component: EmployeesComponent },
-  { path: 'candidates/:id', component: CandidatesComponent },
-  { path: 'candidates', component: CandidatesComponent },
+  { path: 'employees', component: EmployeesComponent, children: [
+    { path: ':id', component: EmployeeDetailsComponent },
+    { path: '', component: EmployeeStartComponent }
+  ] },
+  { path: 'candidates', component: CandidatesComponent, children: [
+    { path: ':id', component: CandidatesComponent }
+  ] },
   { path: '', component: HomeComponent, pathMatch: 'full' }
 ];
 

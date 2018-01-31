@@ -1,5 +1,6 @@
 <a class="employee-item"
-  (click)="onSelect()"
+  [routerLink]="[index]"
+  routerLinkActive="employee-item--active"
 >
   {{employee.name}}
 </a>

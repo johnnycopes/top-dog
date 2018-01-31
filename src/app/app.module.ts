@@ -13,6 +13,7 @@ import { CandidatesComponent } from './candidates/candidates.component';
 import { CandidateListComponent } from './candidates/candidate-list/candidate-list.component';
 import { CandidateItemComponent } from './candidates/candidate-list/candidate-item/candidate-item.component';
 import { CandidateDetailsComponent } from './candidates/candidate-details/candidate-details.component';
+import { EmployeeStartComponent } from './employees/employee-start/employee-start.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { CandidateDetailsComponent } from './candidates/candidate-details/candid
     CandidateListComponent,
     CandidateItemComponent,
     CandidateDetailsComponent,
-    HomeComponent
+    HomeComponent,
+    EmployeeStartComponent
   ],
   imports: [
     BrowserModule,

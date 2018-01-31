@@ -1,6 +1,6 @@
-<div class="employees">
+<main class="employees">
   <app-employee-list class="employees__list"></app-employee-list>
-  <app-employee-details class="employees__details"
-    [employee]="selectedEmployee"
-  ></app-employee-details>
-</div>
+  <section class="employees__details">
+    <router-outlet></router-outlet>
+  </section>
+</main>
