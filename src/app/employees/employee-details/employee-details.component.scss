@@ -1,0 +1,15 @@
+.employee-details {
+  margin: 4rem;
+
+  &__tabs {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+
+  &__tab {
+    margin-right: 1rem;
+    padding: 2rem;
+    border: 1px solid lightgray;
+  }
+
+}

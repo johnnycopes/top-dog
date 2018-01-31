@@ -1,5 +1,11 @@
-<p>
-  {{employee.name}}<br>
-  {{employee.location}}<br>
-  {{employee.salary}}
-</p>
+<main class="employee-details">
+  <aside class="employee-details__tabs">
+    <a class="employee-details__tab">General</a>
+    <a class="employee-details__tab">PTO</a>
+  </aside>
+  <section class="employee-details__view">
+    <h1 class="employee-details__name">{{employee.name}}</h1>
+    <h2 class="employee-details__location">{{employee.location}}</h2>
+    <h3 class="employee-details__salary">{{employee.salary}}</h3>
+  </section>
+</main>
