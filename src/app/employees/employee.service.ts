@@ -7,9 +7,9 @@ export class EmployeeService {
   selectedEmployee = new EventEmitter<Employee>();
 
   private employees: Employee[] = [
-    new Employee('John Coppola', 'New York', 10),
-    new Employee('Juan Cortes', 'Atlanta', 11),
-    new Employee('Jesslyn Landgren', 'Atlanta', 11)
+    new Employee('1', 'John Coppola', 'New York', 10),
+    new Employee('2', 'Juan Cortes', 'Atlanta', 11),
+    new Employee('3', 'Jesslyn Landgren', 'Atlanta', 11)
   ];
   constructor() { }
 

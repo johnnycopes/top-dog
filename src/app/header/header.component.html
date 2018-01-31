@@ -1,7 +1,17 @@
 <header class="header">
   <nav class="header__container">
-    <li class="header__link header__app-name">Top Dog</li>
-    <li class="header__link">Employees</li>
-    <li class="header__link">Candidates</li>
+    <a class="header__link header__app-name"
+      routerLink="/"
+      routerLinkActive="header__link--active"
+      [routerLinkActiveOptions]="{exact: true}"
+    >Top Dog</a>
+    <a class="header__link"
+      routerLink="/employees"
+      routerLinkActive="header__link--active"
+    >Employees</a>
+    <a class="header__link"
+      routerLink="/candidates"
+      routerLinkActive="header__link--active"
+    >Candidates</a>
   </nav>
 </header>

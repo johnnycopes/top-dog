@@ -5,11 +5,16 @@
     justify-content: flex-end;
     border-bottom: 1px solid lightgray;
   }
-  
+
   &__link {
     padding: 2rem;
+
+    &--active {
+      font-weight: 700;
+      color: indianred;
+    }
   }
-  
+
   &__app-name {
     margin-right: auto;
   }
