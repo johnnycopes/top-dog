@@ -3,7 +3,9 @@
     <a class="employee-details__tab">General</a>
     <a class="employee-details__tab">PTO</a>
   </aside>
-  <section class="employee-details__view">
+  <section class="employee-details__view"
+    *ngIf="employee"
+  >
     <h1 class="employee-details__name">{{employee.name}}</h1>
     <h2 class="employee-details__location">{{employee.location}}</h2>
     <h3 class="employee-details__salary">{{employee.salary}}</h3>
