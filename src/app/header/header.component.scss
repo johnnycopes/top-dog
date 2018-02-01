@@ -1,17 +1,21 @@
+@import '~scss/variables';
+
 .header {
 
   &__container {
     display: flex;
     justify-content: flex-end;
-    border-bottom: 1px solid lightgray;
+    margin-bottom: 2rem;
   }
 
   &__link {
-    padding: 2rem;
+    margin: 0 1rem;
+    padding: 1.5rem 2rem;
 
     &--active {
       font-weight: 700;
-      color: indianred;
+      color: $orange;
+      border-bottom: 4px solid $orange;
     }
   }
 

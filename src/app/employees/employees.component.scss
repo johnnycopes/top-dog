@@ -1,13 +1,14 @@
 .employees {
   display: grid;
-  grid-template-columns: 350px 1fr;
+  grid-template-columns: 20% 1fr;
 
   &__list {
     grid-column: 1;
+    max-width: 350px;
   }
 
   &__details {
     grid-column: 2;
-    margin: 4rem;
+    margin: 0 4rem;
   }
 }

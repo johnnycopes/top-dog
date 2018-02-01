@@ -2,17 +2,14 @@ export class Employee {
   constructor(
     public name: string,
     public location: string,
-    public salary: number
+    public jobTitle: string,
+    public techSkills: string[],
+    public otherSkills: string[],
+    public conferences: object[],
+    public achievements: object[],
+    public mbti: {
+      coreType: string,
+      coreTypeName: string
+    }
   ) { }
 }
-
-// - Name
-//   - Location
-//   - Skills / qualifications
-//   - Current / past goals
-//     - Current salary
-//       - Bonus history
-//         - PTO hours spent
-//           - Lunch and learn history
-//             - Conference attendance history
-//               - Other notable events

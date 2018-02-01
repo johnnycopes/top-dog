@@ -1,4 +1,11 @@
+@import '~scss/variables';
+
 .employee-details {
+
+  &__header {
+    margin-bottom: 1rem;
+    color: $blue;
+  }
 
   &__tabs {
     display: flex;
@@ -11,4 +18,34 @@
     border: 1px solid lightgray;
   }
 
+  &__basics {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &__picture {
+    width: 100px;
+    margin-right: 2rem;
+  }
+
+  &__text {
+    margin-right: 4rem;
+  }
+
+  &__edit-btn {
+    margin-left: auto;
+    padding: 1rem 2rem;
+    background: $blue;
+    border-radius: $border-radius;
+    color: $white;
+  }
+
+  &__pto {
+    margin-bottom: 2rem;
+  }
+
+  &__additional-info {
+    margin-bottom: 2rem;
+  }
 }
