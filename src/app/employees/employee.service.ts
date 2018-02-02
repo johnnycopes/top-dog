@@ -1,23 +1,21 @@
 import { Injectable, EventEmitter } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 
 import { Employee } from './employee.model';
 
 @Injectable()
 export class EmployeeService {
+  API = 'http://theboningers.com/HumanResources/Api/Employee';
   selectedEmployee = new EventEmitter<Employee>();
 
-  private employees: Employee[] = [
-    new Employee('John Coppola', 'New York', 'Software Engineer', [], [], [], [], { coreType: 'ENFJ', coreTypeName: 'Protagonist' }),
-    new Employee('Jesslyn Landgren', 'Atlanta', 'Software Engineer', [], [], [], [], { coreType: 'ISFJ', coreTypeName: 'Defender' }),
-    new Employee('Elijah Allstrom-Luttrell', 'Atlanta', 'Software Engineer', [], [], [], [], { coreType: 'INFP', coreTypeName: 'Mediator' })
-  ];
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getEmployees() {
-    return this.employees.slice();
+  getEmployees(): Observable<Employee[]> {
+    return this.http.get<Employee[]>(`${this.API}/0/100`);
   }
 
-  getEmployee(index: number) {
-    return this.employees[index];
+  getEmployee(id: number): Observable<Employee> {
+    return this.http.get<Employee>(`${this.API}/${id}`);
   }
 }

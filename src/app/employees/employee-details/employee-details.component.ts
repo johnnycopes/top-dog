@@ -23,9 +23,14 @@ export class EmployeeDetailsComponent implements OnInit {
       .subscribe(
         (params: Params) => {
           this.id = +params.id;
-          this.employee = this.employeeService.getEmployee(this.id);
+          this.getEmployee(this.id);
         }
       );
+  }
+
+  getEmployee(id: number): void {
+    this.employeeService.getEmployee(this.id)
+      .subscribe(employee => this.employee = employee);
   }
 
 }
