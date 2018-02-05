@@ -1,11 +1,13 @@
 <main class="employee-details" *ngIf="employee">
   <section class="employee-details__header">
-    <img class="employee-details__picture" 
-      src="assets/avatar.svg" 
+    <img class="employee-details__picture"
+      src="assets/avatar.svg"
       alt="employee profile picture"
       />
     <div class="employee-details__basics">
-      <div class="employee-details__text-block">
+      <div class="employee-details__text-block"
+        [ngStyle]="{'width': cols + 'px'}"
+      >
         <h2 class="employee-details__name">
           {{employee.name}}
         </h2>
