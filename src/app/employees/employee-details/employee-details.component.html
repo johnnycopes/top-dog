@@ -1,37 +1,112 @@
 <main class="employee-details" *ngIf="employee">
-  <section class="employee-details__basics">
-    <img class="employee-details__picture" src="assets/avatar.svg" alt="employee profile picture">
-    <div class="employee-details__text">
-      <h1 class="employee-details__name employee-details__header">{{employee.name}}</h1>
-      <h3 class="employee-details__location-and-job">{{employee.jobTitle}} / {{employee.location}}</h3>
+  <section class="employee-details__header">
+    <img class="employee-details__picture" 
+      src="assets/avatar.svg" 
+      alt="employee profile picture"
+      />
+    <div class="employee-details__basics">
+      <div class="employee-details__text-block">
+        <h2 class="employee-details__name">
+          {{employee.name}}
+        </h2>
+        <h3 class="employee-details__job-title">
+          {{employee.jobTitle}}
+        </h3>
+        <h1 class="employee-details__location">
+          {{employee.location}} NYC
+        </h1>
+      </div>
+      <div class="employee-details__contact">
+        <p>phone number here</p>
+        <p>email address here</p>
+      </div>
     </div>
-    <a class="employee-details__edit-btn"
-      routerLink="edit"
-      >
-      <h4>Edit</h4>
-    </a>
   </section>
-  <section class="employee-details__pto">
-    <h2 class="employee-details__header">PTO</h2>
-    pto stuff pto stuff pto stuff pto stuff pto stuff<br>
-    pto stuff pto stuff pto stuff pto stuff pto stuff<br>
-    pto stuff pto stuff pto stuff pto stuff pto stuff<br>
-    pto stuff pto stuff pto stuff pto stuff pto stuff<br>
-    pto stuff pto stuff pto stuff pto stuff pto stuff<br>
-    pto stuff pto stuff pto stuff pto stuff pto stuff<br>
-    pto stuff pto stuff pto stuff pto stuff pto stuff<br>
-  </section>
-  <section class="employee-details__additional-info">
-    <h2 class="employee-details__header">More details</h2>
-    more details more details more details more details<br>
-    more details more details more details more details<br>
-    more details more details more details more details<br>
-    more details more details more details more details<br>
-    more details more details more details more details<br>
-    more details more details more details more details<br>
-    more details more details more details more details<br>
-    more details more details more details more details<br>
-    more details more details more details more details<br>
-    more details more details more details more details<br>
+
+  <section class="employee-details__body">
+    <app-panel>
+      <section class="employee-details__pto">
+        pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br>
+      </section>
+    </app-panel>
+    <app-panel>
+      <section class="employee-details__pto">
+        pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br>
+      </section>
+    </app-panel>
+    <app-panel>
+      <section class="employee-details__pto">
+        pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br>
+      </section>
+    </app-panel>
+    <app-panel>
+      <section class="employee-details__pto">
+        pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br>
+      </section>
+    </app-panel>
+    <app-panel title="PTO">
+      <section class="employee-details__pto">
+        pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br>
+      </section>
+    </app-panel>
+    <app-panel>
+      <section class="employee-details__pto">
+        pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br>
+      </section>
+    </app-panel>
+    <app-panel>
+      <section class="employee-details__pto">
+        pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
+        <br>
+      </section>
+    </app-panel>
   </section>
 </main>

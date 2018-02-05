@@ -1,7 +1,6 @@
 <div class="employee-list">
   <app-employee-item class="employee-list__item"
-    *ngFor="let employee of employees; let i = index"
+    *ngFor="let employee of employees"
     [employee]="employee"
-    [index]="i"
   ></app-employee-item>
 </div>

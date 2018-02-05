@@ -1,4 +1,7 @@
+@import '~scss/variables';
+
 .employee-list {
   display: flex;
   flex-direction: column;
+  color: $white;
 }
