@@ -1,7 +1,7 @@
 <main class="employee-details" *ngIf="employee">
   <section class="employee-details__header">
     <img class="employee-details__picture" 
-      src="assets/avatar.svg" 
+      src="assets/insiten/john_coppola.jpg" 
       alt="employee profile picture"
       />
     <div class="employee-details__basics">
@@ -24,16 +24,17 @@
   </section>
 
   <section class="employee-details__body">
-    <app-panel>
-      <section class="employee-details__pto">
-        pto stuff pto stuff pto stuff pto stuff pto stuff
-        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
-        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
-        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
-        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
-        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
-        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
-        <br>
+    <app-panel
+      class="employee-details__panel-personality"
+      title="Personality"
+      >
+      <section class="employee-details__personality">
+        <img class="employee-details__personality-picture"
+          src="assets/personality-types/esfp.png"
+          alt=""
+          />
+        <h1 class="employee-details__personality-type">ENFP</h1>
+        <h2 class="employee-details__personality-role">Campaigner</h2>
       </section>
     </app-panel>
     <app-panel>
@@ -72,7 +73,7 @@
         <br>
       </section>
     </app-panel>
-    <app-panel title="PTO">
+    <app-panel>
       <section class="employee-details__pto">
         pto stuff pto stuff pto stuff pto stuff pto stuff
         <br> pto stuff pto stuff pto stuff pto stuff pto stuff

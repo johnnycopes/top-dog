@@ -1,8 +1,11 @@
 $white: #FFF;
-$light-gray: #C4C4C4;
+$gray: #BFC0C0;
+$light-gray: lighten($gray, 15%);
 $orange: #EF8354;
-$dark-blue: #2D3142;
+$light-orange: lighten($orange, 6%);
 $blue: #4F5D75;
+$navy: #2D3142;
 
+$border-radius-circle: 50%;
 $border-radius: 6px;
 $font-thick: 600;
