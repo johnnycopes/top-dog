@@ -7,8 +7,6 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PanelComponent implements OnInit {
   @Input() title: string;
-  @Input() rows: string;
-  @Input() columns: string;
 
   constructor() { }
 

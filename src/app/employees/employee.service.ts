@@ -6,7 +6,7 @@ import { Employee } from './employee.model';
 
 @Injectable()
 export class EmployeeService {
-  API = 'http://theboningers.com/HumanResources/Api/Employee';
+  API = 'https://theboningers-app.azurewebsites.net/HumanResources/Api/Employee';
   selectedEmployee = new EventEmitter<Employee>();
 
   constructor(private http: HttpClient) { }

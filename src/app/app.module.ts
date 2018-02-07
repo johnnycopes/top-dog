@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { EventTileComponent } from './components/event-tile/event-tile.component';
 import { PanelComponent } from './components/panel/panel.component';
 import { HomeComponent } from './home/home.component';
 import { EmployeesComponent } from './employees/employees.component';
@@ -24,6 +25,7 @@ import { CandidateDetailsComponent } from './candidates/candidate-details/candid
     AppComponent,
     HeaderComponent,
     PanelComponent,
+    EventTileComponent,
     HomeComponent,
     EmployeesComponent,
     EmployeeStartComponent,

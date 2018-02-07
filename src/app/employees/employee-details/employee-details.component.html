@@ -1,31 +1,32 @@
 <main class="employee-details" *ngIf="employee">
   <section class="employee-details__header">
-    <img class="employee-details__picture" 
-      src="assets/insiten/john_coppola.jpg" 
+    <img class="employee-details__picture"
+      src="assets/insiten/john_coppola.jpg"
       alt="employee profile picture"
       />
-    <div class="employee-details__basics">
-      <div class="employee-details__text-block"
-        [ngStyle]="{'width': cols + 'px'}"
-      >
-        <h2 class="employee-details__name">
-          {{employee.name}}
-        </h2>
-        <h3 class="employee-details__job-title">
-          {{employee.jobTitle}}
-        </h3>
-        <h1 class="employee-details__location">
-          {{employee.location}} NYC
-        </h1>
-      </div>
-      <div class="employee-details__contact">
-        <p>phone number here</p>
-        <p>email address here</p>
-      </div>
-    </div>
+      <h2 class="employee-details__name">
+        {{employee.name}}
+      </h2>
+      <h3 class="employee-details__job-title">
+        {{employee.jobTitle}}
+      </h3>
+      <h2 class="employee-details__location">
+        {{employee.location}} NYC
+      </h2>
+      <h4 class="employee-details__phone">555-555-5555</h4>
+      <h4 class="employee-details__email">person@insiten.com</h4>
   </section>
 
   <section class="employee-details__body">
+    <app-panel
+      class="employee-details__panel-pto"
+      title="PTO"
+      >
+      <section class="employee-details__pto">
+        <h1>PTO goes here</h1>
+      </section>
+    </app-panel>
+
     <app-panel
       class="employee-details__panel-personality"
       title="Personality"
@@ -39,49 +40,31 @@
         <h2 class="employee-details__personality-role">Campaigner</h2>
       </section>
     </app-panel>
-    <app-panel
-      class="employee-details__panel-lunch-and-learn"
-      title="Lunch & Learns"
-      >
-      <section class="employee-details__lunch-and-learn">
-         lunch and learn stuff lunch and learn stuff lunch and learn stuff lunch and learn stuff lunch and learn stuff
-        <br> lunch and learn stuff lunch and learn stuff lunch and learn stuff lunch and learn stuff lunch and learn stuff
-        <br> lunch and learn stuff lunch and learn stuff lunch and learn stuff lunch and learn stuff lunch and learn stuff
-        <br> lunch and learn stuff lunch and learn stuff lunch and learn stuff lunch and learn stuff lunch and learn stuff
-        <br> lunch and learn stuff lunch and learn stuff lunch and learn stuff lunch and learn stuff lunch and learn stuff
-        <br> lunch and learn stuff lunch and learn stuff lunch and learn stuff lunch and learn stuff lunch and learn stuff
-        <br> lunch and learn stuff lunch and learn stuff lunch and learn stuff lunch and learn stuff lunch and learn stuff
-        <br>
-      </section>
-    </app-panel>
+
     <app-panel
       class="employee-details__panel-skills"
       title="Skills"
       >
       <section class="employee-details__skills">
-        skills stuff skills stuff skills stuff skills stuff skills stuff
-        <br> skills stuff skills stuff skills stuff skills stuff skills stuff
-        <br> skills stuff skills stuff skills stuff skills stuff skills stuff
-        <br> skills stuff skills stuff skills stuff skills stuff skills stuff
-        <br> skills stuff skills stuff skills stuff skills stuff skills stuff
-        <br> skills stuff skills stuff skills stuff skills stuff skills stuff
-        <br> skills stuff skills stuff skills stuff skills stuff skills stuff
-        <br>
+        <h1>skills go here</h1>
       </section>
     </app-panel>
+
     <app-panel
-      class="employee-details__panel-pto"
-      title="PTO"
+      class="employee-details__panel-conferences"
+      title="Conferences"
       >
-      <section class="employee-details__skills">
-        pto stuff pto stuff pto stuff pto stuff pto stuff
-        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
-        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
-        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
-        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
-        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
-        <br> pto stuff pto stuff pto stuff pto stuff pto stuff
-        <br>
+      <section class="employee-details__conferences">
+        <h1>conferences go here</h1>
+      </section>
+    </app-panel>
+
+    <app-panel
+      class="employee-details__panel-lunch-and-learns"
+      title="Lunch & Learns"
+      >
+      <section class="employee-details__lunch-and-learns">
+        <h1>lunch and learns go here</h1>
       </section>
     </app-panel>
   </section>
