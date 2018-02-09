@@ -8,6 +8,7 @@
   height: 60px;
   background: $navy;
   color: $white;
+  z-index: map-get($z-index, header);
 
   &__container {
     display: flex;
@@ -23,7 +24,7 @@
     }
 
     &--active {
-      font-weight: $font-thick;
+      font-weight: $font-heavy;
       border-bottom: 4px solid $orange;
     }
   }

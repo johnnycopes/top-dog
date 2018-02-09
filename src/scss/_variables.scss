@@ -8,4 +8,14 @@ $navy: #2D3142;
 
 $border-radius-circle: 50%;
 $border-radius: 6px;
-$font-thick: 600;
+$box-shadow: 0 1px 2px rgba(0,0,0,0.18);
+$font-heavy: 600;
+$font-light: 300;
+
+$z-index: (
+  modal     : 9000,
+  overlay   : 8000,
+  dropdown  : 7000,
+  header    : 6000,
+  footer    : 5000
+);

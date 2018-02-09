@@ -8,6 +8,8 @@
     grid-template-rows: repeat(3, minmax(50px, 33.33%));
     align-items: center;
     padding: 2rem;
+    position: relative;
+    box-shadow: $box-shadow;
   }
 
   &__picture {

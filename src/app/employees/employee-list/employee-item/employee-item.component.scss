@@ -9,10 +9,10 @@
 
   &--active {
     background: $orange;
-    font-weight: $font-thick;
+    font-weight: $font-heavy;
 
     &:hover {
-      background: darken($orange, 10%);
+      background: lighten($orange, 5%);
     }
   }
 }

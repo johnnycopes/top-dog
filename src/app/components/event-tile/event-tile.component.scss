@@ -1,0 +1,13 @@
+@import '~scss/variables';
+
+.event-tile {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid $light-gray;
+
+  &__name {
+    color: $blue;
+  }
+}
