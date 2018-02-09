@@ -1,6 +1,7 @@
 <section class="panel">
   <h3 class="panel__title">{{title}}</h3>
-  <div class="panel__container">
+  <div class="panel__container"
+    [ngClass]="{'horizontal-center': center}">
     <ng-content></ng-content>
   </div>
 </section>

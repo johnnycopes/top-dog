@@ -6,8 +6,10 @@
   margin-bottom: 1rem;
   padding: 1rem;
   border: 1px solid $light-gray;
+  border-radius: $border-radius;
 
   &__name {
     color: $blue;
+    font-weight: $font-heavy;
   }
 }

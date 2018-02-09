@@ -1,13 +1,30 @@
 @import '~scss/variables';
 
 .employee-details {
+  position: relative;
+
+  &__edit {
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    background: $orange;
+    border-radius: $border-radius-circle;
+    bottom: 2rem;
+    right: 2rem;
+    box-shadow: $box-shadow;
+
+    &-icon {
+      fill: $white;
+    }
+  }
 
   &__header {
     display: grid;
     grid-template-columns: calc(150px + 2rem) 1fr 1fr;
     grid-template-rows: repeat(3, minmax(50px, 33.33%));
     align-items: center;
-    padding: 2rem;
+    padding: 1rem 2rem;
     background: $white;
     position: relative;
     box-shadow: $box-shadow;
@@ -21,11 +38,15 @@
     border-radius: $border-radius-circle;
   }
 
+  &__icon {
+    width: 25px;
+    margin-right: 10px;
+  }
+
   &__name {
     grid-column: 2;
     grid-row: 1;
     color: $blue;
-    align-self: end;
   }
 
   &__job-title {
@@ -37,19 +58,27 @@
     grid-column: 2;
     grid-row: 3;
     color: $gray;
-    align-self: start;
   }
 
   &__phone {
     grid-column: 3;
     grid-row: 1;
-    color: $blue;
-    align-self: end;
+    display: flex;
+    align-items: center;
   }
 
   &__email {
     grid-column: 3;
     grid-row: 2;
+    display: flex;
+    align-items: center;
+  }
+
+  &__linkedin {
+    grid-column: 3;
+    grid-row: 3;
+    display: flex;
+    align-items: center;
   }
 
   &__body {
@@ -57,7 +86,7 @@
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 1fr;
     grid-gap: 2rem;
-    padding: 2rem;
+    padding: 2rem 2rem 6rem;
     background: $light-gray;
   }
 

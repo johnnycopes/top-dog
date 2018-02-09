@@ -1,20 +1,36 @@
 <main class="employee-details" *ngIf="employee">
   <section class="employee-details__header">
-    <img class="employee-details__picture"
-      src="assets/insiten/john_coppola.jpg"
-      alt="employee profile picture"
+      <img class="employee-details__picture"
+        src="assets/insiten/john_coppola.jpg"
+        alt="employee profile picture"
       />
-      <h2 class="employee-details__name">
-        {{employee.name}}
-      </h2>
-      <h3 class="employee-details__job-title">
-        {{employee.jobTitle}}
-      </h3>
-      <h2 class="employee-details__location">
-        {{employee.location}} NYC
-      </h2>
-      <h4 class="employee-details__phone">555-555-5555</h4>
-      <h4 class="employee-details__email">person@insiten.com</h4>
+    <h2 class="employee-details__name">
+      {{employee.name}}
+    </h2>
+    <h3 class="employee-details__job-title">
+      {{employee.jobTitle}}
+    </h3>
+    <h2 class="employee-details__location">
+      {{employee.location}} NYC
+    </h2>
+    <h4 class="employee-details__phone">
+      <img class="employee-details__icon"
+        src="assets/icons/phone.svg" alt="phone icon"
+        />
+      555-555-5555
+    </h4>
+    <h4 class="employee-details__email">
+      <img class="employee-details__icon"
+        src="assets/icons/email.svg" alt="email icon"
+        />
+      person@insiten.com
+    </h4>
+    <h4 class="employee-details__linkedin">
+      <img class="employee-details__icon"
+        src="assets/icons/user.svg" alt="user icon"
+        />
+      LinkedIn
+    </h4>
   </section>
 
   <section class="employee-details__body">
@@ -30,6 +46,7 @@
     <app-panel
       class="employee-details__panel-personality"
       title="Personality"
+      center="true"
       >
       <section class="employee-details__personality">
         <img class="employee-details__personality-picture"
@@ -77,4 +94,19 @@
       </section>
     </app-panel>
   </section>
+
+  <a class="employee-details__edit"
+    routerLink="edit"
+  >
+    <i class="employee-details__edit-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" x="0px" y="0px">
+        <g data-name="Layer 2">
+          <g>
+            <path d="M4.32,96c-1.6,0-2.81-.25-3.39-.82C-2.16,92,3.17,74.37,6.43,69.63a1.5,1.5,0,0,1,.34-.52c14.74-14.78,36.84-37,51.53-51.7l5.06-5.08.14-.16L73.15,2.5a8.49,8.49,0,0,1,12,0l8.26,8.29a8.57,8.57,0,0,1,0,12.07l-9.51,9.52-.14.16-3.6,3.62c-14.64,14.7-37.84,38-53.13,53.31a1.5,1.5,0,0,1-.44.31C23.2,92.09,10.68,96,4.32,96ZM3,92.94c2.36.61,15.12-2.06,20.54-4.83L8.13,72.59C5.2,78,2.17,90.57,3,92.94Zm-.16-.05ZM10,70.17,26,86.29C41.29,71,63.77,48.4,78.08,34l2.55-2.56L64.57,15.37l-4.15,4.16ZM66.68,13.23,82.73,29.35l8.59-8.6a5.56,5.56,0,0,0,0-7.83L83.06,4.62a5.49,5.49,0,0,0-7.79,0Z"
+            />
+          </g>
+        </g>
+      </svg>
+    </i>
+  </a>
 </main>
