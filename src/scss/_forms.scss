@@ -1,0 +1,31 @@
+@import '~scss/variables';
+
+.form {
+  display: block;
+  max-width: 500px;
+  margin: 0 auto;
+
+  &__group {
+    margin-bottom: 1rem;
+  }
+
+  input {
+    padding: 0.5rem;
+    width: 100%;
+    border: 2px solid transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  label {
+    display: block;
+  }
+
+  input.ng-invalid.ng-touched,
+  select.ng-invalid.ng-touched {
+    border: 2px solid red;
+  }
+
+}

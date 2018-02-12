@@ -1,3 +1,78 @@
-<p>
-  employee-edit works!
-</p>
+<h1>Edit employee</h1>
+<form class="employee-edit__form form"
+  (ngSubmit)="onSubmit(form)"
+  #form="ngForm"
+  >
+  <div class="form__group">
+    <label class="form__label" for="name">Name</label>
+    <input class="form__label"
+      id="name"
+      type="text"
+      name="name"
+      required
+      ngModel
+      #name="ngModel"
+      />
+  </div>
+  <div class="form__group">
+    <label class="form__label" for="job-title">Job Title</label>
+    <input class="form__input-text"
+      id="job-title"
+      type="text"
+      name="jobTitle"
+      required
+      ngModel
+      #jobTitle="ngModel"
+      />
+  </div>
+  <div class="form__group">
+    <label class="form__label" for="location">Location</label>
+    <input class="form__input-text"
+      id="location"
+      type="text"
+      name="location"
+      required
+      ngModel
+      #location="ngModel"
+      />
+  </div>
+  <div class="form__group">
+    <label class="form__label" for="phone">Phone</label>
+    <input class="form__input-text"
+      id="phone"
+      type="phone"
+      name="phone"
+      required
+      ngModel
+      #phone="ngModel"
+      />
+  </div>
+  <div class="form__group">
+    <label class="form__label" for="email">Email</label>
+    <input class="form__input-text"
+      id="email"
+      type="email"
+      name="email"
+      email
+      required
+      ngModel
+      #email="ngModel"
+      />
+  </div>
+  <div class="form__group">
+    <label class="form__label" for="linkedin">LinkedIn</label>
+    <input class="form__input-text"
+      id="linkedin"
+      type="text" 
+      name="linkedin"
+      ngModel
+      #linkedin="ngModel"
+      />
+  </div>
+  <button 
+    type="submit"
+    [disabled]="form.invalid"
+    >
+    Submit
+  </button>
+</form>

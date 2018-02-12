@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-employee-edit',
@@ -20,6 +21,10 @@ export class EmployeeEditComponent implements OnInit {
           this.editMode = !!params.id;
         }
       );
+  }
+
+  onSubmit(form: NgForm) {
+    console.log('form:', form.value);
   }
 
 }
