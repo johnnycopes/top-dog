@@ -1,14 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { EventTileComponent } from './components/event-tile/event-tile.component';
 import { PanelComponent } from './components/panel/panel.component';
 import { ButtonComponent } from './components/button/button.component';
-
+import { EventTileComponent } from './components/event-tile/event-tile.component';
 import { HomeComponent } from './home/home.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
@@ -39,12 +40,13 @@ import { CandidateDetailsComponent } from './candidates/candidate-details/candid
     CandidatesComponent,
     CandidateListComponent,
     CandidateItemComponent,
-    CandidateDetailsComponent
+    CandidateDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
