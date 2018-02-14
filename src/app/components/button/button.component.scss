@@ -1,0 +1,17 @@
+@import '~scss/variables';
+
+.btn {
+  border: 0;
+  outline: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+
+  &-primary {
+    background: $orange;
+    color: $white;
+  }
+
+  &-secondary {
+    color: $blue;
+  }
+}

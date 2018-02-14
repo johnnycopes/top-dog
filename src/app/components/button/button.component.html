@@ -1,0 +1,9 @@
+<button class="btn"
+  [ngClass]="{
+    'btn-primary': appearance === 'primary',
+    'btn-secondary': appearance === 'secondary'
+  }"
+  [type]="type"
+>
+  {{title}}
+</button>

@@ -1,7 +1,7 @@
 <main class="employee-details" *ngIf="employee">
   <section class="employee-details__header">
       <img class="employee-details__picture"
-        src="assets/insiten/john_coppola.jpg"
+        src="assets/insiten/{{employee.imageFile}}.jpg"
         alt="employee profile picture"
       />
     <h2 class="employee-details__name">
@@ -11,25 +11,27 @@
       {{employee.jobTitle}}
     </h3>
     <h2 class="employee-details__location">
-      {{employee.location}} NYC
+      {{employee.location?.cityCode}}
     </h2>
     <h4 class="employee-details__phone">
       <img class="employee-details__icon"
         src="assets/icons/phone.svg" alt="phone icon"
         />
-      555-555-5555
+      {{employee.phoneNumber}}
     </h4>
     <h4 class="employee-details__email">
       <img class="employee-details__icon"
         src="assets/icons/email.svg" alt="email icon"
         />
-      person@insiten.com
+      {{employee.email}}
     </h4>
     <h4 class="employee-details__linkedin">
       <img class="employee-details__icon"
         src="assets/icons/user.svg" alt="user icon"
         />
-      LinkedIn
+      <a href="{{employee.linkedInUrl}}" target="_blank">
+        LinkedIn
+      </a>
     </h4>
   </section>
 
@@ -50,11 +52,11 @@
       >
       <section class="employee-details__personality">
         <img class="employee-details__personality-picture"
-          src="assets/personality-types/esfp.png"
-          alt=""
+          src="assets/personality-types/{{employee.mbtiPrimary?.imageFile}}.png"
+          alt="employee.mbtiPrimary?.type"
           />
-        <h1 class="employee-details__personality-type">ENFP</h1>
-        <h2 class="employee-details__personality-role">Campaigner</h2>
+        <h1 class="employee-details__personality-type">{{employee.mbtiPrimary?.type}}</h1>
+        <h2 class="employee-details__personality-role">{{employee.mbtiPrimary?.name}}</h2>
       </section>
     </app-panel>
 
