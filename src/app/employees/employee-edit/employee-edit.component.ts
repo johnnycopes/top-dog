@@ -37,7 +37,7 @@ export class EmployeeEditComponent implements OnInit {
       .subscribe(employee => {
         this.employee = employee;
         this.initEditForm();
-      );
+      });
   }
 
   private initAddForm() {
