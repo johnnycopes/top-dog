@@ -1,28 +1,24 @@
 <h1>Edit employee</h1>
 <form class="employee-edit__form form"
-  (ngSubmit)="onSubmit(form)"
-  #form="ngForm"
+  *ngIf="editForm"
+  [formGroup]="editForm"
+  (ngSubmit)="onSubmit()"
   >
   <div class="form__group">
     <label class="form__label" for="name">Name</label>
     <input class="form__label"
       id="name"
       type="text"
-      name="name"
-      required
-      ngModel
-      #name="ngModel"
+      formControlName="name"
       />
+      <span *ngIf="editForm.get('name').invalid && editForm.get('name').touched">please enter a valid username</span>
   </div>
   <div class="form__group">
     <label class="form__label" for="job-title">Job Title</label>
     <input class="form__input-text"
       id="job-title"
       type="text"
-      name="jobTitle"
-      required
-      ngModel
-      #jobTitle="ngModel"
+      formControlName="jobTitle"
       />
   </div>
   <div class="form__group">
@@ -30,10 +26,7 @@
     <input class="form__input-text"
       id="location"
       type="text"
-      name="location"
-      required
-      ngModel
-      #location="ngModel"
+      formControlName="location"
       />
   </div>
   <div class="form__group">
@@ -41,10 +34,7 @@
     <input class="form__input-text"
       id="phone"
       type="phone"
-      name="phone"
-      required
-      ngModel
-      #phone="ngModel"
+      formControlName="phoneNumber"
       />
   </div>
   <div class="form__group">
@@ -52,27 +42,43 @@
     <input class="form__input-text"
       id="email"
       type="email"
-      name="email"
-      email
-      required
-      ngModel
-      #email="ngModel"
+      formControlName="email"
       />
   </div>
   <div class="form__group">
     <label class="form__label" for="linkedin">LinkedIn</label>
     <input class="form__input-text"
       id="linkedin"
-      type="text" 
-      name="linkedin"
-      ngModel
-      #linkedin="ngModel"
+      type="text"
+      formControlName="linkedIn"
       />
   </div>
-  <button 
-    type="submit"
-    [disabled]="form.invalid"
+  <div class="form__group"
+    formArrayName="skills"
     >
-    Submit
+    <h4>skills:</h4>
+    <div class="form-group"
+      *ngFor="let skillControl of editForm.get('skills').controls; let i = index"
+      >
+      <input type="text" [formControlName]="i" />
+    </div>
+    <button
+      type="button"
+      (click)="onAddSkill()"
+     >
+      Add Skill
+    </button>
+  </div>
+  <hr>
+  <button
+    type="submit"
+    [disabled]="editForm.invalid"
+    >
+    Save
+  </button>
+  <button
+    type="button"
+    >
+    Cancel
   </button>
 </form>
